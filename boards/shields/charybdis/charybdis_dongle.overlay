@@ -1,5 +1,17 @@
 #include "charybdis.dtsi"
 
+
+
+&trackball_split {
+  status = "okay";
+};
+
+/* enable the listener on central */
+&trackball_listener {
+  status = "okay";
+};
+
+
 / {
     kscan_dongle: kscan_dongle {
         compatible = "zmk,kscan-mock";

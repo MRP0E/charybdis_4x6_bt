@@ -1,4 +1,7 @@
 #include "charybdis.dtsi"
+#include "charybdis_pmw3610.dtsi"
+#include "charybdis_pointer.dtsi"
+
 
 / {
     kscan0: kscan0 {
@@ -33,3 +36,12 @@
     kscan = <&kscan0>;
 };
 
+&trackball {
+  status = "okay";
+};
+
+/* Enable the trackball listener on the peripheral with the sensor */
+&trackball_split {
+  device = <&trackball>;
+  status = "okay";
+};
